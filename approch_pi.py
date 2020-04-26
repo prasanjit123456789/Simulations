@@ -1,3 +1,6 @@
+#This is a simulation to appraoch pi from the concept of collision of boxes
+#This takes lots of time to find the result.
+
 from math import exp
 #by the 3blue1brown simulation
 
@@ -46,11 +49,7 @@ def next_collision(b1,b2,click):
 
 #this function counts the collisions by recursion
 def collision(b1,b2):
-    ''''print("file")
-    print("position of b1=", b1.position)
-    print("position of b2=", b2.position)
-    print("velocity of b1=", b1.velocity)
-    print("velocity of b2=", b2.velocity,"\n")'''''
+    
     if b1.position>b2.position or b1.position<0:
         return 0
     elif b1.velocity<b2.velocity and b1.velocity>0:
