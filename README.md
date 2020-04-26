@@ -1,2 +1,2 @@
 # Simulations
-I tried some of the simulations mydelf.
+I tried some of the simulations myself.
