@@ -2,6 +2,8 @@
 One box is kept at 0 velocity near to a wall and another mass of (10^n) times of the first collides with the first
 box. the no of collisions happened by the first box is the approximation to pi. The collision happens on a friction
  less surface*/
+
+//It takes lots of time and works for less than 10 digits
 #include<iostream>
 using namespace std;
 
