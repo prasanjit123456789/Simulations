@@ -21,13 +21,8 @@ def excel_file(loc,sheet_no, row_start= 2,col_start= 1,row_end=None,col_end=None
     del wb
     return np.array(data)
 
-par_names=[]
-def set_par_names(list):
-    global par_names
-    par_names=list
 
-def other_params(f,x,y,parms,params_covar,sigma=None):
-    global par_names
+def other_params(f,x,y,parms,params_covar,sigma=None,names=[]):
     if sigma==None:
         sigma=np.ones_like(y)
     r=f(x,*parms)-y
@@ -38,10 +33,10 @@ def other_params(f,x,y,parms,params_covar,sigma=None):
     par_err=np.sqrt(np.diag(params_covar))
     par_no=0
     for i,j in zip(parms,par_err):
-        if par_names==[]:
+        if names==[]:
             print("%20s%d = %0.6e +/- %0.6e"%("par",par_no,i,j))
         else:
-            print("%20s = %0.6e +/- %0.6e"%(par_names[par_no],i,j))
+            print("%20s = %0.6e +/- %0.6e"%(names[par_no],i,j))
         par_no += 1
     print()
     return ch2, DOF, par_err
