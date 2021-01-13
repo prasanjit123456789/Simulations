@@ -3,7 +3,7 @@ double fit_func(double *x,double *par){
         return par[0] / pow(sin((x[0]-par[1])*pi/360),4);
 }
 
-void root(){
+void ruther_ford(){
  gStyle->SetOptFit(1111);
  gStyle->SetOptStat(111111);
  TCanvas *c1=new TCanvas("me","A graph",500,500,500,500);
