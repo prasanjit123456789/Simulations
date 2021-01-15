@@ -37,7 +37,7 @@ def print_file(file_name,columns=None):
     with open(file_name,"w") as f:
         for i in range(row):
             for j in columns:
-                f.write("%f"%arr[j][i])
+                f.write("%e"%arr[j][i])
                 f.write(" ")
             f.write("\n")
     print("Printing complete.........")
